@@ -12,18 +12,18 @@ import { Header } from './Header';
 import { Thumbnail } from './Thumbnail';
 
 const App = () => {
-  const aboutMe = "I'm a passionate programmer with an insatiable desire to learn!"
+  const aboutMe = "A passionate programmer with an insatiable desire to learn!"
+
   return (
     <div className="container">
       <Header 
         bgColor = "#0C359E"
         fontColor = "#F6F5F5"
         heading = "Hi, I'm Clarissa!"
-        subHeading = "Software Developer"
-        text = {aboutMe}
+        subHeading = {aboutMe}
       />
     </div>
-  )
+  );
 };
 
 export default App;
