@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 
 import { Header } from './Header';
 import { CurrentProject } from './CurrentProject';
+import { Stats } from './Stats';
 import { Thumbnail } from './Thumbnail';
 
 const App = () => {
@@ -38,6 +39,13 @@ const App = () => {
         fontColor = "#F6F5F5"
         heading = "Hi, I'm Clarissa!"
         subHeading = {aboutMe}
+      />
+
+      <Stats
+        langs = "5"
+        skills = "10"
+        projects = "7"
+        courses = "8"
       />
       
       <CurrentProject
