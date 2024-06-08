@@ -89,6 +89,8 @@
   padding: 50px;
 
   background-color: #EE99C2;
+  background-image: url('./assets/current-project-bg.svg');
+  background-size: cover;
   color: #F6F5F5;
   text-align: center;
 }
@@ -121,7 +123,7 @@
 
 .stats {
   width: 100%;
-  height: 75vh;
+  min-height: 50vh;
 
   padding: 50px;
 
@@ -148,7 +150,7 @@
 .stat-card {
   min-width: 80px;
   height: 300px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding: 20px;
 
   display: flex;
@@ -173,6 +175,14 @@
   font-size: 16px !important;
 }
 
+.popover a {
+  color:#0C359E;
+}
+
+.popover a:hover {
+  color: #2b5fe2;
+}
+
 .stat-img {
   width: 80px;
   height: 80px;
@@ -190,3 +200,14 @@
 .stat {
   font-size: larger;
 }
+
+/* .stat-expansion {
+  font-size: 16px;
+  text-align: left;
+}
+
+.stat-expansion ul {
+  left: 25%;
+  position: relative;
+  padding: 0;
+} */

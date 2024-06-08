@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import skill from './assets/skills.png';
 import goal from './assets/goal.png';
 import book from './assets/book.png';
+import arrow from './assets/curly-arrow.png';
 
 import { StatCard } from './StatCard';
 
@@ -137,7 +138,7 @@ const Stats = ({ langs, skills, projects, courses }) => {
                                         popover={langPopover}
                                     />
                                 </Row>
-                                <Row className='justify-content-center'></Row>
+                                <Row className="stat-expansion"></Row>
                             </Col>
 
                             <Col>   {/*Col 2*/}
@@ -149,7 +150,7 @@ const Stats = ({ langs, skills, projects, courses }) => {
                                         popover={skillsPopover}
                                     />
                                 </Row>
-                                <Row className='justify-content-center'></Row>
+                                <Row className='stat-expansion'></Row>
                             </Col>
 
                             <Col>   {/*Col 3*/}
