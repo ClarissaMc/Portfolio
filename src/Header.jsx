@@ -8,9 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderImage from './assets/home-header.svg';
 import Resume from './assets/Clarissa-McCarthy-Resume.pdf';
 
-const Header = ({ bgColor, fontColor, heading, subHeading }) => {
+const Header = ({ id, bgColor, fontColor, heading, subHeading }) => {
     return (
-        <Container>
+        <Container id={id}>
             <div className="header" style={{ backgroundImage: `url(${HeaderImage})`,
                 backgroundSize: 'cover',
                 backgroundColor: bgColor,

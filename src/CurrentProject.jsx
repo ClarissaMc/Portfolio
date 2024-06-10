@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import portfolio from './assets/portfolio.png';
 import art from './assets/graphic-design-cloud.png';
 
-const CurrentProject = ({ tldr, text }) => {
+const CurrentProject = ({ id, tldr, text }) => {
     return (
-        <Container>
+        <Container id={id}>
             <div className="current-project">
                 <Row className='align-items-center'>
                     <Col lg="3">

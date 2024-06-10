@@ -1,17 +1,17 @@
 import * as React from 'react';
 import './App.css';
 
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Header } from './Header';
 import { CurrentProject } from './CurrentProject';
 import { Stats } from './Stats';
+import { Navbar } from './Navbar';
 import { Thumbnail } from './Thumbnail';
+
+import home from './assets/home.png';
+import stats from './assets/stats.png';
+import working from './assets/woman-at-computer.png';
 
 const App = () => {
   const aboutMe = "A passionate programmer with an insatiable desire to learn!";
@@ -32,9 +32,33 @@ const App = () => {
     Regardless, I already have plenty of ideas for future projects to showcase those skills!
   </p>);
 
+  const tabs = {
+    Home: {
+      name: "Home",
+      linkTo: "#welcome_header",
+      img: home,
+      alt: "home",
+    },
+    Stats: {
+      name: "Stats",
+      linkTo: "#stats_section",
+      img: stats,
+      alt: "pie chart",
+    },
+    CurrentProject: {
+      name: "Current Project",
+      linkTo: "#current_proj_section",
+      img: working,
+      alt: "gear turning",
+    },
+  };
+
   return (
     <div className="myContainer">
+      <Navbar tabs={tabs}/>
+
       <Header 
+        id = "welcome_header"
         bgColor = "#0C359E"
         fontColor = "#F6F5F5"
         heading = "Hi, I'm Clarissa!"
@@ -42,15 +66,17 @@ const App = () => {
       />
 
       <Stats
+        id = "stats_section"
         langs = "5"
         skills = "10"
-        projects = "7"
+        projects = "8"
         courses = "8"
       />
       
       <CurrentProject
-        tldr={tldr}
-        text={currentProject}
+        id = "current_proj_section"
+        tldr = {tldr}
+        text = {currentProject}
       />
     </div>
   );
