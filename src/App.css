@@ -256,3 +256,12 @@
   max-width: 200px;
   padding-right: 10px !important;
 }
+
+#projects-section {
+  background-color: #FFE3CA;
+}
+
+.thumbnail-image {
+  width: 100px;
+  height: 100px;
+}

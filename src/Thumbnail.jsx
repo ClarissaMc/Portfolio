@@ -14,9 +14,14 @@ const allSkills = {
 };
 
 const Thumbnail = (title, image, alt, skills) => {
+    let classes = "thumbnail-container";
+
+    for (var skill in skills)
+        classes += " " + skill;
+
     return (
-        <div className="thumbnail-container">
-            <image href={image} className="thumbnail-project" alt={alt}/>
+        <div className={classes}>
+            <image href={image} className="thumbnail-image" alt={alt}/>
             {
                 skills.map((item) => (
                     <img href={allSkills[item]} 

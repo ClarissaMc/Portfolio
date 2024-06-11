@@ -12,6 +12,8 @@ import { Thumbnail } from './Thumbnail';
 import home from './assets/home.png';
 import stats from './assets/stats.png';
 import working from './assets/woman-at-computer.png';
+import alien from './assets/AlienInvasion.png';
+import stocks from './assets/PythonStock.png';
 
 const App = () => {
   const aboutMe = "A passionate programmer with an insatiable desire to learn!";
@@ -49,13 +51,151 @@ const App = () => {
       name: "Current Project",
       linkTo: "#current_proj_section",
       img: working,
-      alt: "gear turning",
+      alt: "person working on computer",
     },
   };
 
+  const projects = {
+    AlienInvasion: {
+      title: "Alien Invasion Game",
+      year: "2023",
+      skills: [
+        "Python",
+      ],
+      img: alien,
+      alt: "Space-Invaders-style logo",
+    },
+    StockTrader: {
+      title: "Python Stock Trader",
+      year: "2023",
+      skills: [
+        "Python",
+        "Data Viz",
+      ],
+      img: stocks,
+      alt: "bar chart with trendline and increasing sized segments",
+    },
+    LearningLog: {
+      title: "Learning Log Website",
+      year: "2023",
+      skills: [
+        "Python",
+      ],
+      img: "",
+      alt: "",
+    },
+    Huffman: {
+      title: "Huffman Encoding Algorithm",
+      year: "2023",
+      skills: [
+        "C",
+      ],
+      img: "",
+      alt: "",
+    },
+    RAID2: {
+      title: "RAID2 Encoding Algorithm",
+      year: "2023",
+      skills: [
+        "C",
+      ],
+      img: "",
+      alt: "",
+    },
+    PortfolioV1: {
+      title: "Portfolio Website v1",
+      year: "2023",
+      skills: [
+        "HTML/CSS",
+        "JavaScript",
+      ],
+      img: "",
+      alt: "",
+    },
+    Shell: {
+      title: "Linux Shell Recreation",
+      year: "2023",
+      skills: [
+        "C",
+      ],
+      img: "",
+      alt: "",
+    },
+    MM1: {
+      title: "M/M/1 Queueing System",
+      year: "2023",
+      skills: [
+        "C",
+      ],
+      img: "",
+      alt: "",
+    },
+    Globe: {
+      title: "3D Travel Globe",
+      year: "2023",
+      skills: [
+        "JavaScript",
+      ],
+      img: "",
+      alt: "",
+    },
+    Bellabeat: {
+      title: "Data Analytics Case Study for Fitness Devices",
+      year: "2024",
+      skills: [
+        "R",
+        "SQL",
+        "Data Analysis",
+        "Data Viz",
+      ],
+      img: "",
+      alt: "",
+    },
+    Compiler: {
+      title: "Compiler for Java Sub-Language",
+      year: "2024",
+      skills: [
+        "Java",
+      ],
+      img: "",
+      alt: "",
+    },
+    UPositive: {
+      title: "E-Commerce Website w/ Subscription Service",
+      year: "2024",
+      skills: [
+        "HTML/CSS",
+        "JavaScript",
+      ],
+      img: "",
+      alt: "",
+    },
+    Blog: {
+      title: "Mock Blog Website",
+      year: "2024",
+      skills: [
+        "HTML/CSS",
+        "MERN",
+      ],
+      img: "",
+      alt: "",
+    },
+    SearchEngine: {
+      title: "Search Engine for Tech News",
+      year: "2024",
+      skills: [
+        "HTML/CSS",
+        "JavaScript",
+        "React",
+      ],
+      img: "",
+      alt: "",
+    },
+  }
+
   return (
-    <div className="myContainer">
-      <Navbar tabs={tabs}/>
+    <div className = "myContainer">
+      <Navbar tabs = {tabs}/>
 
       <Header 
         id = "welcome_header"
