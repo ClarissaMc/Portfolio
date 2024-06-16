@@ -259,9 +259,54 @@
 
 #projects-section {
   background-color: #FFE3CA;
+  color: #333333;
+  padding: 50px !important;
+}
+
+#projects-section h2 {
+  font-size: 42px;
+  text-align: center;
+}
+
+#projects-section h3 {
+  font-size: 22px;
+}
+
+#projects-section span {
+  max-width: 300px;
+}
+
+#projects-section span .col {
+  margin-bottom: 20px;
+}
+
+#projects-container {
+  justify-content: center;
+}
+
+.thumbnail-container {
+  text-align: center;
+}
+
+.thumb-img-div {
+  display: flex;
+  justify-content: center;
 }
 
 .thumbnail-image {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.skills-div {
+  max-width: 25px;
+  margin-right: 5px;
+  display: inline-flex;
+}
+
+.skill-icon {
+  width: 25px;
+  height: 25px;
 }

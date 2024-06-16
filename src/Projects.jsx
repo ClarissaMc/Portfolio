@@ -1,9 +1,12 @@
+import * as React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { FilterButton } from './FilterButton';
+import { Thumbnail } from './Thumbnail';
 
 const filters = [
     "Python",
@@ -23,6 +26,24 @@ const filters = [
 ];
 
 const Projects = ({ projects }) => {
+    const thumbnails = projects.map((project, index) => {
+        var title = project.title;
+        var image = project.img;
+        var alt = project.alt;
+        var skills = project.skills;
+
+        return (
+            <Col className="mt-3" key={index}>
+                <Thumbnail
+                    title={title}
+                    image={image}
+                    alt={alt}
+                    skills={skills}
+                />
+            </Col>
+        );
+    });
+
     return (
         <Container id="projects-section">
             <Row>
@@ -38,18 +59,9 @@ const Projects = ({ projects }) => {
                         />
                     </Row>
                     <Row id="projects-container">
-                        {projects.map((project) => {
-                            return (
-                                <Col sm={6} md={4} className="mt-3">
-                                    <Thumbnail
-                                        title={project.title}
-                                        image={project.image}
-                                        alt={project.alt}
-                                        skills={project.skills}
-                                    />
-                                </Col>
-                            );
-                        })}
+                        {thumbnails.map((thumbnail, index) => (
+                            <span key={index}>{thumbnail}</span>
+                        ))}
                     </Row>
                 </Col>
 

@@ -7,15 +7,17 @@ import { Header } from './Header';
 import { CurrentProject } from './CurrentProject';
 import { Stats } from './Stats';
 import { Navbar } from './Navbar';
-import { Thumbnail } from './Thumbnail';
+import { Projects } from './Projects';
 
 import home from './assets/home.png';
 import stats from './assets/stats.png';
 import working from './assets/woman-at-computer.png';
+import placeholder from './assets/placeholder.png';
 import alien from './assets/AlienInvasion.png';
 import stocks from './assets/PythonStock.png';
 
 const App = () => {
+  console.log(placeholder);
   const aboutMe = "A passionate programmer with an insatiable desire to learn!";
 
   const tldr = "I'm using React to redesign my portfolio website!";
@@ -55,143 +57,147 @@ const App = () => {
     },
   };
 
-  const projects = {
-    AlienInvasion: {
+  const projects = [
+    {
       title: "Alien Invasion Game",
       year: "2023",
       skills: [
         "Python",
       ],
-      img: alien,
+      img: "/src/assets/placeholder.png",
       alt: "Space-Invaders-style logo",
     },
-    StockTrader: {
+    {
       title: "Python Stock Trader",
       year: "2023",
       skills: [
         "Python",
-        "Data Viz",
+        // "Data Viz",
       ],
-      img: stocks,
+      img: "/src/assets/placeholder.png",
       alt: "bar chart with trendline and increasing sized segments",
     },
-    LearningLog: {
+    {
       title: "Learning Log Website",
       year: "2023",
       skills: [
         "Python",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Huffman: {
+    {
       title: "Huffman Encoding Algorithm",
       year: "2023",
       skills: [
         "C",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    RAID2: {
+    {
       title: "RAID2 Encoding Algorithm",
       year: "2023",
       skills: [
         "C",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    PortfolioV1: {
+    {
       title: "Portfolio Website v1",
       year: "2023",
       skills: [
-        "HTML/CSS",
+        "HTML",
+        "CSS",
         "JavaScript",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Shell: {
+    {
       title: "Linux Shell Recreation",
       year: "2023",
       skills: [
         "C",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    MM1: {
+    {
       title: "M/M/1 Queueing System",
       year: "2023",
       skills: [
         "C",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Globe: {
+    {
       title: "3D Travel Globe",
       year: "2023",
       skills: [
         "JavaScript",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Bellabeat: {
+    {
       title: "Data Analytics Case Study for Fitness Devices",
       year: "2024",
       skills: [
         "R",
         "SQL",
-        "Data Analysis",
-        "Data Viz",
+        // "Data Analysis",
+        // "Data Viz",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Compiler: {
+    {
       title: "Compiler for Java Sub-Language",
       year: "2024",
       skills: [
         "Java",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    UPositive: {
+    {
       title: "E-Commerce Website w/ Subscription Service",
       year: "2024",
       skills: [
-        "HTML/CSS",
+        "HTML",
+        "CSS",
         "JavaScript",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    Blog: {
+    {
       title: "Mock Blog Website",
       year: "2024",
       skills: [
-        "HTML/CSS",
-        "MERN",
+        "HTML",
+        "CSS",
+        // "MERN",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-    SearchEngine: {
+    {
       title: "Search Engine for Tech News",
       year: "2024",
       skills: [
-        "HTML/CSS",
+        "HTML",
+        "CSS",
         "JavaScript",
         "React",
       ],
-      img: "",
-      alt: "",
+      img: "/src/assets/placeholder.png",
+      alt: "placeholder",
     },
-  }
+  ];
 
   return (
     <div className = "myContainer">
@@ -218,6 +224,8 @@ const App = () => {
         tldr = {tldr}
         text = {currentProject}
       />
+
+      <Projects projects={projects}/>
     </div>
   );
 };
